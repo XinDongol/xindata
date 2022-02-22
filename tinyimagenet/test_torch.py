@@ -15,6 +15,8 @@ datadir = '/scratch/tiny-imagenet-200'
 
 train_ds = ImageFolder(datadir+'/train/', transform=transform_train)
 
+print(train_ds.targets)
+
 train_dl = data.DataLoader(dataset=train_ds, 
                            batch_size=64, 
                            drop_last=False, 
